@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Plus</title>
+
+    <!---Icone-->
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #1A1D29;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+        #header{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr;
+        }
+        #header img{
+            width: 10%;
+            float: left;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #icones ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #icones li{
+            display: inline-block;
+            list-style-type: none;
+            padding: 20px;
+        }
+        #header a{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            color: #FFFFFF;
+            text-decoration:none;
+        }
+        .container{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+        h2{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 36px;
+            color: #FFFFFF;  
+        }
+        .box{
+            padding: 15px 10px 15px 10px;
+            background-color: #31343E;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            border-style: none;
+        }
+        .preco input{
+            cursor:pointer;
+        }
+        .box b{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+        b.preco{
+            float: right;
+            margin-left: 10px;
+        }
+        p.white{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+        .box_input{
+            padding: 10px 5px 10px 5px;
+            background-color: #31343E;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            border-style: none;
+        }
+        .box_input_pag {
+            padding: 10px 5px 10px 5px;
+            background-color: #31343E;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-style: none;
+        }
+        #last{
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10.903px;
+            line-height: 13px;
+            color: #FFFFFF;
+        }
+        #send{
+            text-align: center;
+        }
+        #send button{
+            width: 347px;
+            height: 44px;
+            background: #0178DC;
+            border-radius: 10;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+            cursor:pointer;
+            border-style: none;
+        }
+        #film{
+            margin-top: 150px;
+            text-align: center;
+        }
+        #film iframe{
+            width: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <div>
+            <img src="img/disney.svg">
+        </div>
+        <div id="icones">
+            <ul
+                <li><a href="">Menu</a></li>
+                <li><a href="">Filmes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <form>
+        <div class="container">
+            <div id="titulos">
+                <h2>Escolha seu plano</h2>
+                <div class="box">   
+                    <b>Disney+Mensal</b>
+                    <b class="preco">
+                        R$ 27,90
+                        <input type="radio" name="plan">
+                    </b>
+                </div>
+                <div class="box">   
+                    <b>Disney+Anual</b>
+                    <b class="preco">
+                        R$ 279,90
+                        <input type="radio" name="plan">
+                    </b>
+                </div>
+                <div>
+                    <h2>Crie sua conta</h2>
+                    <p class="white">
+                        Digite seu email<br>
+                        <input class="box_input" type="text" placeholder="E-mail" name="emailInput">
+                    </p>
+                    <p class="white">
+                        Digite sua Senha<br>
+                        <input class="box_input" type="password" placeholder="Senha" name="senhaInput">
+                    </p>
+                </div>
+                <div id="pag">
+                    <h2>Pagamento</h2>
+                    <p class="white">
+                        Titular do cartão<br>
+                        <input class="box_input" type="text" name="cardInput">
+                    </p>
+                    <p class="white">
+                        Número do cartão<br>
+                        <input class="box_input" type="text"  name="cardInput">
+                    </p>
+                    <p class="white">
+                        Data de validade<br>
+                        <input class="box_input" type="text"  placeholder="MM/AA" name="validInput">
+                    </p>
+                    <p class="white">
+                        Código de segurança<br>
+                        <input class="box_input" type="text"  placeholder="CVV" name="codInput">
+                    </p>
+                    <p class="white">
+                        Tipo de cartão<br>
+                        <select class="box_input_pag">
+                            <option value=cred>Cartão de Crédito</option>
+                            <option value=deb>Cartão de Débito</option>
+                        </select>
+                    </p>
+                    <p class="white">
+                        CPF<br>
+                        <input class="box_input" type="text"  name="cpfInput">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="last">
+            <div>
+                <p>Armazenar minhas informações de pagamento<br>
+                   para futuras compras na Disney.
+                </p> 
+                <ul>
+                    <li>Estou de acordo com os termos de uso</li>
+                    <li> Aceito receber promoções e descontos por e-mail</li>
+                </ul>
+            </div>
+        </div>
+        <div id="send">
+            <p>
+                <button type="submit">CONCORDO E ASSINAR</button>
+            </p>
+        </div>
+        
+    </form>
+
+    <div id="film">
+        <p class="white">Aproveite para assistir ao próximo lançamento da Marvel</p>
+        <iframe width="713" height="401" src="https://www.youtube.com/embed/rz2WBg5g7Ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
